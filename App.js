@@ -195,7 +195,7 @@ export default class App extends Component
 	{
 		return (
 			<SafeAreaView style={styles.container}>
-				<Text style={styles.header}>Film list Test </Text>				
+				<Text style={styles.header}>Film list</Text>				
 				{ 
 				!this.state.jwtToken 
 				? 
