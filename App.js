@@ -11,6 +11,8 @@ import styles from './styles'
 
 export default class App extends Component 
 {
+	serverIP = 'http://192.168.0.200:8080'; // modify as fit
+
 	constructor(props) 
 	{
 		super(props);
@@ -28,7 +30,7 @@ export default class App extends Component
 
 		try 
 		{
-			fetch("http://192.168.0.200:8080/api/v1/login", 
+			fetch(this.serverIP + "/api/v1/login", 
 			{
 				method: "POST",
 				body: JSON.stringify({ username: this.state.username }),
@@ -64,7 +66,7 @@ export default class App extends Component
 
 		try
 		{
-			fetch('http://192.168.0.200:8080/api/v1/films',
+			fetch(this.serverIP + '/api/v1/films',
 			{
 				method: 'POST',
 				body: JSON.stringify({ name: this.state.film, rating: this.state.rating }),
@@ -102,7 +104,7 @@ export default class App extends Component
 
 		try
 		{
-			fetch('http://192.168.0.200:8080/api/v1/films',
+			fetch(this.serverIP + '/api/v1/films',
 			{
 				method: 'GET',
 				headers:
@@ -159,7 +161,7 @@ export default class App extends Component
 	{
 		try
 		{
-			fetch('http://192.168.0.200:8080/api/v1/films',
+			fetch(this.serverIP + '/api/v1/films',
 			{
 				method: 'PATCH',
 				body: JSON.stringify({ id: this.state.editingFilmId, rating: this.state.editingFilmRating }),
