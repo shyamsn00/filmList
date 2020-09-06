@@ -2,7 +2,9 @@
 
 ## Native mobile (Android) app using React Native (Expo)
 
-### Instructions
+Pre-built apk: https://expo.io/artifacts/7b996914-5e18-41f6-931d-9905348d07f1
+
+### Build & Run Instructions
 
 - Clone this repo.
 - Run `npm install`
